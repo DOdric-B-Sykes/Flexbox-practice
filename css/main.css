@@ -99,11 +99,12 @@ textarea {
 html {
   background-color: #222;
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
+  padding: 0 2em;
   font-size: 1.25em;
   height: 100%;
 }
@@ -111,11 +112,71 @@ body {
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
   font-weight: 700;
+  flex-flow: row wrap;
   display: flex; 
+  justify-content: center;
+  align-items: center; 
   justify-content: space-between;
 }
 
-.div-1, .div-2, .div-3 {
+header, footer {
+    background-color: #222;
+    color: white;
+    height: 80px;
+    width: 100%;
+}
+
+nav {
+    float: right;
+    display: flex;
+    align-items: flex-start;
+}
+
+nav ul {
+    padding: 50px 0 0 250px;
+    display: flex;
+}
+
+nav ul li {
+    color: rosybrown;
+    display: inline-block;
+   padding-left: 10px;
+   font-size: 1.2em;
+   text-decoration: underline;
+
+}
+
+header {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+main {
+    color: #fff;
+    background-color: #222;
+    height: 250px;
+    width: 100%;
+    border-bottom: 2px solid silver;
+    margin: 15px 0 20px 0;
+    padding-bottom: 15px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.9em; 
+    padding-top: 10px;
+}
+
+#job-title {
+    color: rosybrown;
+    text-decoration: underline;
+}
+
+#div-1, #div-2, #div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   color: #fff;
   line-height: 1.8em;
@@ -131,15 +192,32 @@ body {
 }
 
 .heading {
+    color: rosybrown;
     padding-right: 10px; 
     font-weight: 700;
 }
 
-.div-1, .div-2 {
+#div-1, #div-2 {
     border-right: 2px solid silver; 
     padding-right: 20px; 
 }
 
+#div-2, #div-3 {
+    padding-left: 10px;
+}
+
+footer {
+    border-top: 2px solid silver;
+    margin-top: 25px;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li a {
+    padding-left: 20px;
+}
 
 
 /* ==========================================================================
