@@ -100,6 +100,7 @@ html {
   background-color: #222;
   height: 100%;
   width: 100%;
+  font-size: 16px;
 }
 
 body {
@@ -107,6 +108,10 @@ body {
   padding: 0 2em;
   font-size: 1.25em;
   height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -122,53 +127,77 @@ body {
 header, footer {
     background-color: #222;
     color: white;
-    height: 80px;
+    height: 100%;
     width: 100%;
-}
-
-nav {
-    float: right;
-    display: flex;
-    align-items: flex-start;
-}
-
-nav ul {
-    padding: 50px 0 0 250px;
-    display: flex;
-}
-
-nav ul li {
-    color: rosybrown;
-    display: inline-block;
-   padding-left: 10px;
-   font-size: 1.2em;
-   text-decoration: underline;
-
 }
 
 header {
     margin-bottom: 20px;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-main {
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    border-bottom: 5px dashed rosybrown;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: rosybrown;
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+nav ul li {
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+   font-size: 1.2em;
+   text-decoration: underline;
+   width: 100%;
+
+}
+
+#descrip {
     color: #fff;
     background-color: #222;
-    height: 250px;
+    height: 100%;
     width: 100%;
     border-bottom: 2px solid silver;
     margin: 15px 0 20px 0;
     padding-bottom: 15px;
-}
-
-h1 {
-    font-size: 3em;
-    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
     font-size: 1.9em; 
     padding-top: 10px;
+}
+
+#Greeting {
+    font-size: 1.5em;
+    
 }
 
 #job-title {
@@ -182,9 +211,10 @@ p {
   line-height: 1.8em;
   font-size: 1.1em;
   background-color: #222;
-  height: 300px;
+  height: 100%;
   display: flex; 
-  width: 30%;
+  flex-flow: row wrap;
+  width: 100%;
   justify-content: center;
   align-items: center; 
   font-weight: normal; 
@@ -198,8 +228,12 @@ p {
 }
 
 #div-1, #div-2 {
-    border-right: 2px solid silver; 
-    padding-right: 20px; 
+    padding-bottom: 15px; 
+}
+
+#div-2 {
+    border-top: 2px dashed silver;
+    border-bottom: 2px dashed silver;
 }
 
 #div-2, #div-3 {
@@ -217,6 +251,65 @@ footer ul li {
 
 footer ul li a {
     padding-left: 20px;
+}
+
+/************ TABLET ***********/
+@media all and (min-width: 786px) {
+    
+#bottom-section {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+#div-1 {
+    flex-basis: 33.3%;
+}
+
+#div-2 {
+    flex-basis: 33.3%;
+    border-left: 2px dashed silver;
+    border-right: 2px dashed silver;
+    border-top: none;
+    border-bottom: none;
+}
+
+#div-3 {
+    flex-basis: 33.3%;
+}
+
+}
+
+/********* DESKTOP *************/
+@media all and (min-width: 1200px) {
+
+#top-section {
+    display: flex;
+    width: 100%;
+}
+
+header h1 {
+    justify-content: flex-start;
+    width: 60%;
+    border-bottom: none;
+}
+
+nav {
+    justify-content: flex-end;
+    width: 40%;
+}
+
+header nav ul {
+    width: 40%;
+    flex-flow: row nowrap;
+}
+
+#div-1, #div-2, #div-3 {
+    padding: 15px 10px;
+}
+
 }
 
 
@@ -305,6 +398,7 @@ footer ul li a {
        (min-resolution: 1.25dppx),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
+
 }
 
 /* ==========================================================================
